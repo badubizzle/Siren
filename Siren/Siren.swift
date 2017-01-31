@@ -38,7 +38,7 @@ public extension SirenDelegate {
 /// - option: (DEFAULT) Presents user with option to update app now or at next launch (2 button alert)
 /// - skip: Presents user with option to update the app now, at next launch, or to skip this version all together (3 button alert)
 /// - none: Doesn't show the alert, but instead returns a localized message for use in a custom UI within the sirenDidDetectNewVersionWithoutAlert() delegate method
-public enum SirenAlertType {
+@objc public enum SirenAlertType:Int {
     case force        // Forces user to update your app (1 button alert)
     case option       // (DEFAULT) Presents user with option to update app now or at next launch (2 button alert)
     case skip         // Presents user with option to update the app now, at next launch, or to skip this version all together (3 button alert)
@@ -50,7 +50,7 @@ public enum SirenAlertType {
 /// - immediately: Version check performed every time the app is launched.
 /// - daily:  Version check performed once a day.
 /// - weekly: Version check performed once a week.
-public enum SirenVersionCheckType: Int {
+@objc public enum SirenVersionCheckType: Int {
     case immediately = 0    // Version check performed every time the app is launched
     case daily = 1          // Version check performed once a day
     case weekly = 7         // Version check performed once a week
